@@ -3,7 +3,10 @@ import java.util.Scanner;
 public class Main {
 
     public static void main(String[] args) {
-
+        /**
+         * Для соблюдения принципа единой ответственности, выносим логику по товару
+         * в отдельный класс Products
+         */
         Products.showProducts();
 
         System.out.println("Введите два слова: название товара и количество. Или end");

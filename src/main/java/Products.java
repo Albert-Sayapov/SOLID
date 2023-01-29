@@ -12,6 +12,10 @@ public class Products {
         products.put("Пирожок", 45);
         products.put("Молоко", 70);
     }
+
+    /**
+     * Избавляемся от магического числа 4
+     */
     protected Purchase[] purchases = new Purchase[Products.getProducts().size()];
 
     public static HashMap<String, Integer> getProducts() {

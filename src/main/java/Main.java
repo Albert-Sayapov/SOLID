@@ -7,11 +7,11 @@ public class Main {
          * Для соблюдения принципа единой ответственности, выносим логику по товару
          * в отдельный класс Products
          */
-        Products.showProducts();
+        Products products = new Products();
+        products.showProducts();
 
         System.out.println("Введите два слова: название товара и количество. Или end");
         Scanner scanner = new Scanner(System.in);
-        Products products = new Products();
         while (true) {
             String line = scanner.nextLine();
             if ("end".equals(line)) break;
@@ -21,7 +21,7 @@ public class Main {
             products.addPurchase(product, count);
         }
 
-        long sum = products.sum(Products.getProducts());
+        long sum = products.sum(products.getProducts());
         System.out.println("ИТОГО: " + sum);
     }
 }
